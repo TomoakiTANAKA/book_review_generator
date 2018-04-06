@@ -1,0 +1,68 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.content-wrap {
+    width: 100%;
+}
+
+.content {
+    width: 800px;
+    margin: 0 auto;
+    h1 {
+        text-align: center;
+        padding: .5em 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        font-size: 28px;
+        margin: 15px 0;
+    }
+    .ui-area {
+        margin: 20px 0px;
+        padding: 10px 0px;
+        &__content {
+            padding: 0 15px;
+        }
+    }
+    .isbn {
+        padding-top: 30px;
+        p {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        &__textarea {
+            width: 350px;
+            height: 35px;
+            font-size: 15px;
+        }
+        :-ms-input-placeholder {
+            text-align: center;
+        }
+        ::-webkit-input-placeholder {
+            text-align: center;
+        }
+        .form-area {
+            text-align: center;
+        }
+    }
+    .result {
+        p {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.footer {
+    margin: 30px 0;
+    border-top: 1px solid gray;
+
+    p {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
