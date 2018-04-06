@@ -1,0 +1,99 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.button {
+  border: 1px solid gray;
+  border-radius: 25px;
+  text-align: center;
+  padding: 10px 0px;
+  width: 150px;
+  max-width: 200px;
+  height: 15px;
+  margin: 30px auto; }
+  .button:hover {
+    background-color: #F0F9E0; }
+
+body {
+  font-family: 'Courier New', Courier, monospace; }
+
+.content-wrap {
+  width: 100%; }
+
+.content {
+  width: 800px;
+  margin: 0 auto; }
+  .content h1 {
+    text-align: center;
+    padding: .5em 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 28px;
+    margin: 15px 0; }
+  .content .ui-area {
+    margin: 20px 0px;
+    padding: 10px 0px; }
+    .content .ui-area__content {
+      padding: 0 15px; }
+  .content .isbn {
+    padding-top: 30px; }
+    .content .isbn p {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      margin-top: 5px; }
+    .content .isbn__textarea {
+      width: 350px;
+      height: 35px;
+      font-size: 15px; }
+    .content .isbn :-ms-input-placeholder {
+      text-align: center; }
+    .content .isbn ::-webkit-input-placeholder {
+      text-align: center; }
+    .content .isbn .form-area {
+      text-align: center; }
+  .content .result p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px; }
+
+.footer {
+  margin: 30px 0;
+  border-top: 1px solid gray; }
+  .footer p {
+    text-align: center;
+    margin-top: 15px; }
