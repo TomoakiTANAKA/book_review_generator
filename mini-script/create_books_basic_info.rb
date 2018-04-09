@@ -1,7 +1,7 @@
-# QiitaのAPIを利用して、指定したタグの記事をcsvに吐き出すスクリプト
-# APIの返り値 : 
-# 利用制限 : https://qiita.com/api/v2/docs#%E5%88%A9%E7%94%A8%E5%88%B6%E9%99%90
-
+# 書籍APIを使った書評の雛形作成
+# 参考：https://openbd.jp/
+# 使い方
+# ruby create_books_basic_info.rb 4827209324
 require 'net/http'
 require 'uri'
 require 'json'
@@ -27,7 +27,7 @@ class CreateBooksBasicInfo
         # "text_content": json_book["onix"]["CollateralDetail"]["TextContent"],
         # "description": json_book["onix"]["DescriptiveDetail"],
         # === onix ===
-        "table-of-content": json_book["onix"]["CollateralDetail"]["TextContent"][1]["Text"],
+        "toc": json_book["onix"]["CollateralDetail"]["TextContent"][1]["Text"],
         "page": json_book["onix"]["DescriptiveDetail"]["Extent"][0]["ExtentValue"],
         # === sumamry ===
         "isbn": json_book["summary"]["isbn"],
@@ -40,12 +40,12 @@ class CreateBooksBasicInfo
 end
 
 if __FILE__ == $0
-  # API叩く
-  isbn = 4806134325
+  isbn = ARGV[0].to_i
   obj = CreateBooksBasicInfo.new(isbn)
   book_info = obj.get_book_info
 
-  pp book_info
+  # for-debug
+  # pp book_info
 
   erb = File.open("./template.html.erb").read
   puts ERB.new(erb).result(binding)
